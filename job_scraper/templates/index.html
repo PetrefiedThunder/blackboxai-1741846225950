@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Assistant</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-briefcase text-indigo-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-semibold text-gray-900">Job Search Assistant</span>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button id="refreshBtn" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-600 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <i class="fas fa-sync-alt mr-2"></i>
+                        Refresh Jobs
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Search Form -->
+        <div class="bg-white rounded-lg shadow px-5 py-6 sm:px-6 mb-6">
+            <form id="searchForm" class="space-y-4">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <div>
+                        <label for="titles" class="block text-sm font-medium text-gray-700">Job Titles</label>
+                        <select id="titles" name="titles[]" multiple class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                            <option value="Program Manager">Program Manager</option>
+                            <option value="Business Development Manager">Business Development Manager</option>
+                            <option value="Digital Transformation Lead">Digital Transformation Lead</option>
+                            <option value="Technical Product Manager">Technical Product Manager</option>
+                            <option value="Operations Manager">Operations Manager</option>
+                            <option value="Stakeholder Engagement Manager">Stakeholder Engagement Manager</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
+                        <input type="text" id="location" name="location" value="Los Angeles, CA" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                    <div>
+                        <label for="radius" class="block text-sm font-medium text-gray-700">Radius (miles)</label>
+                        <input type="number" id="radius" name="radius" value="25" min="5" max="100" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div>
+                        <label for="min_salary" class="block text-sm font-medium text-gray-700">Minimum Salary</label>
+                        <input type="number" id="min_salary" name="min_salary" value="80000" step="5000" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                    <div>
+                        <label for="max_salary" class="block text-sm font-medium text-gray-700">Maximum Salary</label>
+                        <input type="number" id="max_salary" name="max_salary" value="200000" step="5000" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <i class="fas fa-search mr-2"></i>
+                        Search Jobs
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="rounded-md {{ 'bg-green-50' if category == 'success' else 'bg-red-50' }} p-4 mb-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas {{ 'fa-check-circle text-green-400' if category == 'success' else 'fa-exclamation-circle text-red-400' }}"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm {{ 'text-green-700' if category == 'success' else 'text-red-700' }}">
+                                    {{ message }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- Results -->
+        <div class="bg-white rounded-lg shadow px-5 py-6 sm:px-6">
+            <div class="border-b border-gray-200 pb-5 flex justify-between items-center">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                    Job Listings
+                    {% if last_updated %}
+                        <span class="text-sm text-gray-500 ml-2">
+                            Last updated: {{ last_updated }}
+                        </span>
+                    {% endif %}
+                </h3>
+                <div class="flex items-center">
+                    <span class="text-sm text-gray-500 mr-2">Sort by:</span>
+                    <select id="sortSelect" class="mt-1 block pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                        <option value="score">Match Score</option>
+                        <option value="date">Date Posted</option>
+                        <option value="salary">Salary</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="jobsList" class="mt-6 space-y-4">
+                {% if jobs %}
+                    {% for job in jobs %}
+                        <div class="bg-white border rounded-lg p-6 hover:shadow-lg transition-shadow duration-200">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-900">{{ job.title }}</h3>
+                                    <div class="flex items-center mt-1 space-x-2 text-sm text-gray-600">
+                                        <i class="fas fa-building"></i>
+                                        <span>{{ job.company }}</span>
+                                        <span class="mx-1">•</span>
+                                        <i class="fas fa-link"></i>
+                                        <span>{{ job.source }}</span>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium {{ 'bg-green-100 text-green-800' if job.score >= 0.7 else 'bg-yellow-100 text-yellow-800' if job.score >= 0.4 else 'bg-red-100 text-red-800' }}">
+                                        {{ "%.0f"|format(job.score * 100) }}% Match
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="mt-4 space-y-3">
+                                <div class="flex items-center space-x-2 text-sm text-gray-600">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>{{ job.location }}</span>
+                                    {% if job.salary %}
+                                        <span class="mx-2">•</span>
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <span>{{ job.salary }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="flex items-center space-x-2 text-sm text-gray-600">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>Posted: {{ job.date_posted if job.date_posted else job.date_found|format_date }}</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-2">{{ job.description }}</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    {% if job.required_skills %}
+                                        {% for skill in job.required_skills %}
+                                            <span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded">
+                                                {{ skill }}
+                                            </span>
+                                        {% endfor %}
+                                    {% endif %}
+                                    {% if job.technical_skills %}
+                                        {% for skill in job.technical_skills %}
+                                            <span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded">
+                                                {{ skill }}
+                                            </span>
+                                        {% endfor %}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="mt-4 flex justify-end">
+                                <a href="{{ job.url }}" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-600 bg-indigo-100 hover:bg-indigo-200">
+                                    View Job
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="text-center py-12">
+                        <i class="fas fa-search text-gray-400 text-5xl mb-4"></i>
+                        <p class="text-gray-500">No jobs found. Try adjusting your search criteria.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-xl">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto"></div>
+            <p class="mt-4 text-gray-700">Searching for jobs...</p>
+        </div>
+    </div>
+
+    <script>
+        // Form submission handling
+        document.getElementById('searchForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            loadingOverlay.classList.remove('hidden');
+
+            try {
+                const formData = new FormData(e.target);
+                const response = await fetch('/search', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                });
+
+                if (!response.ok) throw new Error('Search failed');
+
+                const data = await response.json();
+                updateJobsList(data.jobs);
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error performing job search. Please try again.');
+            } finally {
+                loadingOverlay.classList.add('hidden');
+            }
+        });
+
+        // Refresh button handling
+        document.getElementById('refreshBtn').addEventListener('click', async () => {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            loadingOverlay.classList.remove('hidden');
+
+            try {
+                const response = await fetch('/jobs/refresh');
+                if (!response.ok) throw new Error('Refresh failed');
+
+                const data = await response.json();
+                updateJobsList(data.jobs);
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error refreshing jobs. Please try again.');
+            } finally {
+                loadingOverlay.classList.add('hidden');
+            }
+        });
+
+        // Sort select handling
+        document.getElementById('sortSelect').addEventListener('change', (e) => {
+            const jobsList = document.getElementById('jobsList');
+            const jobs = Array.from(jobsList.children);
+            
+            jobs.sort((a, b) => {
+                switch (e.target.value) {
+                    case 'score':
+                        return parseFloat(b.dataset.score) - parseFloat(a.dataset.score);
+                    case 'date':
+                        return new Date(b.dataset.date) - new Date(a.dataset.date);
+                    case 'salary':
+                        return parseFloat(b.dataset.salary || 0) - parseFloat(a.dataset.salary || 0);
+                    default:
+                        return 0;
+                }
+            });
+
+            jobsList.innerHTML = '';
+            jobs.forEach(job => jobsList.appendChild(job));
+        });
+
+        // Update jobs list
+        function updateJobsList(jobs) {
+            const jobsList = document.getElementById('jobsList');
+            jobsList.innerHTML = jobs.length ? '' : `
+                <div class="text-center py-12">
+                    <i class="fas fa-search text-gray-400 text-5xl mb-4"></i>
+                    <p class="text-gray-500">No jobs found. Try adjusting your search criteria.</p>
+                </div>
+            `;
+
+            jobs.forEach(job => {
+                const jobElement = document.createElement('div');
+                jobElement.className = 'bg-white border rounded-lg p-6 hover:shadow-lg transition-shadow duration-200';
+                jobElement.dataset.score = job.score;
+                jobElement.dataset.date = job.date_found;
+                jobElement.dataset.salary = job.salary ? parseFloat(job.salary.replace(/[^0-9.]/g, '')) : 0;
+
+                jobElement.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">${job.title}</h3>
+                            <p class="text-sm text-gray-600">${job.company}</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
+                                job.score >= 0.7 ? 'bg-green-100 text-green-800' :
+                                job.score >= 0.4 ? 'bg-yellow-100 text-yellow-800' :
+                                'bg-red-100 text-red-800'
+                            }">
+                                ${Math.round(job.score * 100)}% Match
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Rest of the job card HTML -->
+                `;
+
+                jobsList.appendChild(jobElement);
+            });
+        }
+    </script>
+</body>
+</html>
