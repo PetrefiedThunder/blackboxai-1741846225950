@@ -1,0 +1,39 @@
+{
+  "jobs": [
+    {
+      "title": "Senior Program Manager",
+      "company": "Tech Innovations Inc.",
+      "location": "Los Angeles, CA",
+      "description": "Leading digital transformation initiatives and stakeholder engagement. Experience with Salesforce, project management, and business intelligence tools required.",
+      "salary": "$120,000 - $160,000",
+      "date_posted": "2024-03-12T10:00:00",
+      "url": "https://example.com/job1",
+      "source": "Indeed",
+      "score": 0.92
+    },
+    {
+      "title": "Business Development Manager",
+      "company": "Global Solutions Corp",
+      "location": "Los Angeles, CA",
+      "description": "Drive strategic partnerships and revenue growth. Experience in CRM implementation, stakeholder management, and process automation.",
+      "salary": "$100,000 - $140,000",
+      "date_posted": "2024-03-11T15:30:00",
+      "url": "https://example.com/job2",
+      "source": "LinkedIn",
+      "score": 0.88
+    },
+    {
+      "title": "Digital Transformation Lead",
+      "company": "Innovation Labs",
+      "location": "Los Angeles, CA",
+      "description": "Lead digital transformation initiatives. Skills in change management, process optimization, and technical implementation required.",
+      "salary": "$130,000 - $180,000",
+      "date_posted": "2024-03-13T09:15:00",
+      "url": "https://example.com/job3",
+      "source": "Indeed",
+      "score": 0.85
+    }
+  ],
+  "timestamp": "2025-03-13T06:04:12.444256",
+  "total_jobs": 3
+}
