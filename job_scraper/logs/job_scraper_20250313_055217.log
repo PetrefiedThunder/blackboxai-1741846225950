@@ -1,0 +1,250 @@
+2025-03-13 05:53:16,016 - job_scraper - ERROR - Error: 403 Client Error: Forbidden for url: https://www.indeed.com/jobs?q=Program+Manager+OR+Business+Development+Manager+OR+Digital+Transformation+Lead+OR+Technical+Product+Manager+OR+Operations+Manager+OR+Stakeholder+Engagement+Manager&l=Los+Angeles%2C+CA&radius=25&start=0
+Context: {'url': 'https://www.indeed.com/jobs', 'attempt': 1}
+2025-03-13 05:53:23,465 - job_scraper - ERROR - Error: 403 Client Error: Forbidden for url: https://www.indeed.com/jobs?q=Program+Manager+OR+Business+Development+Manager+OR+Digital+Transformation+Lead+OR+Technical+Product+Manager+OR+Operations+Manager+OR+Stakeholder+Engagement+Manager&l=Los+Angeles%2C+CA&radius=25&start=0
+Context: {'url': 'https://www.indeed.com/jobs', 'attempt': 2}
+2025-03-13 05:53:38,480 - job_scraper - ERROR - Error: 403 Client Error: Forbidden for url: https://www.indeed.com/jobs?q=Program+Manager+OR+Business+Development+Manager+OR+Digital+Transformation+Lead+OR+Technical+Product+Manager+OR+Operations+Manager+OR+Stakeholder+Engagement+Manager&l=Los+Angeles%2C+CA&radius=25&start=0
+Context: {'url': 'https://www.indeed.com/jobs', 'attempt': 3}
+2025-03-13 05:53:44,407 - job_scraper - INFO - Found job: Brand Designer (Remote Canada) at Mogo
+2025-03-13 05:53:44,408 - job_scraper - INFO - Found job: Content Coordinator at Blend
+2025-03-13 05:53:44,408 - job_scraper - INFO - Found job: Creative Director, Marketing & Brand at Opry Entertainment Group
+2025-03-13 05:53:44,408 - job_scraper - INFO - Found job: Product Manager at Yoga Alliance
+2025-03-13 05:53:44,408 - job_scraper - INFO - Found job: Project Coordinator at Tevora
+2025-03-13 05:53:44,408 - job_scraper - INFO - Found job: Customer Success Manager - Pennsylvania at Alma
+2025-03-13 05:53:44,408 - job_scraper - INFO - Found job: Digital Designer at Skullcandy Inc.
+2025-03-13 05:53:44,409 - job_scraper - INFO - Found job: Director, Brand Creative Art Direction - Global Basketball at Nike
+2025-03-13 05:53:44,409 - job_scraper - INFO - Found job: Administrative Coordinator at InTandem Human Resources, LLC
+2025-03-13 05:53:44,409 - job_scraper - INFO - Found job: Video Editor at The Divine PR
+2025-03-13 05:53:44,409 - job_scraper - INFO - Found job: Senior Executive Assistant at GEMMA Biotherapeutics
+2025-03-13 05:53:44,409 - job_scraper - INFO - Found job: Remote Administrative Assistant at Commutatus
+2025-03-13 05:53:44,409 - job_scraper - INFO - Found job: Equipment Operator (Commercial) at City of Killeen, Texas
+2025-03-13 05:53:44,409 - job_scraper - INFO - Found job: Director, Group Operations at PIH Health
+2025-03-13 05:53:44,409 - job_scraper - INFO - Found job: Construction Cost Analyst at San Diego County Regional Airport Authority
+2025-03-13 05:53:44,409 - job_scraper - INFO - Found job: Undergraduate Logistics Summer Intern at NASA Jet Propulsion Laboratory
+2025-03-13 05:53:44,410 - job_scraper - INFO - Found job: Director, Public Safety at San Diego Convention Center Corporation
+2025-03-13 05:53:44,410 - job_scraper - INFO - Found job: Med Lab Scientist at MetaSense Inc
+2025-03-13 05:53:44,410 - job_scraper - INFO - Found job: Private Brands Coordinator at Macy's
+2025-03-13 05:53:44,410 - job_scraper - INFO - Found job: Events and Ministry Coordinator at Apartment Life
+2025-03-13 05:53:44,410 - job_scraper - INFO - Found job: Events and Ministry Coordinator at Apartment Life
+2025-03-13 05:53:44,410 - job_scraper - INFO - Found job: Assistant Warehouse Manager at Salcomp Manufacturing USA
+2025-03-13 05:53:44,410 - job_scraper - INFO - Found job: Channel Account Manager at Picus Security
+2025-03-13 05:53:44,410 - job_scraper - INFO - Found job: Project Planner at Bloomingdale's
+2025-03-13 05:53:44,411 - job_scraper - INFO - Found job: Don't see what you're looking for? at Duetto
+2025-03-13 05:53:44,411 - job_scraper - INFO - Found job: Scrum Master I (US) at TD Securities
+2025-03-13 05:53:44,411 - job_scraper - INFO - Found job: Product Manager- Shockwave (Remote) at Johnson & Johnson
+2025-03-13 05:53:44,411 - job_scraper - INFO - Found job: Warehouse Supervisor 1st Shift at Boxzooka
+2025-03-13 05:53:44,411 - job_scraper - INFO - Found job: Creative Intern (Design and Advertising) at BIGO
+2025-03-13 05:53:44,411 - job_scraper - INFO - Found job: Business Analyst at Business Strategic Analyst
+2025-03-13 05:53:44,411 - job_scraper - INFO - Found job: Social Media Manager and Content Coordinator at Paisans Pizzeria And Bar
+2025-03-13 05:53:44,411 - job_scraper - INFO - Found job: Customer Service Manager, MRO at Delta Air Lines
+2025-03-13 05:53:44,411 - job_scraper - INFO - Found job: Executive Assistant at Lenmar Consulting Inc
+2025-03-13 05:53:44,412 - job_scraper - INFO - Found job: Scribe - Part Time at Unio Health Partners
+2025-03-13 05:53:44,412 - job_scraper - INFO - Found job: Linux Desktop Administrator II (Linux System Analysis) at Safran
+2025-03-13 05:53:44,412 - job_scraper - INFO - Found job: Computational Biology Data Analyst at Dale WorkForce Solutions
+2025-03-13 05:53:44,412 - job_scraper - INFO - Found job: RN - Electrophysiology at Providence
+2025-03-13 05:53:44,412 - job_scraper - INFO - Found job: Executive Assistant at Snowflake
+2025-03-13 05:53:44,412 - job_scraper - INFO - Found job: ADMINISTRATIVE ASSISTANT (PART TIME) at Crothall Healthcare
+2025-03-13 05:53:44,412 - job_scraper - INFO - Found job: Director, Talent Partner - Banana Republic at Gap Inc.
+2025-03-13 05:53:44,412 - job_scraper - INFO - Found job: Data Entry Clerk at Emerald Logistix
+2025-03-13 05:53:44,413 - job_scraper - INFO - Found job: Project Manager at Carter Lumber
+2025-03-13 05:53:44,413 - job_scraper - INFO - Found job: Executive Assistant at Snowflake
+2025-03-13 05:53:44,413 - job_scraper - INFO - Found job: Entry Level Personal Assistant at Emerald Logistix
+2025-03-13 05:53:44,413 - job_scraper - INFO - Found job: Information Security Analyst – Strategic Services at Tevora
+2025-03-13 05:53:44,413 - job_scraper - INFO - Found job: Paid Media Manager at True North
+2025-03-13 05:53:44,413 - job_scraper - INFO - Found job: Managing Director Managing Partner China APAC at Consulting Centrale
+2025-03-13 05:53:44,413 - job_scraper - INFO - Found job: Senior Manager - Learning and Development at FNP
+2025-03-13 05:53:44,413 - job_scraper - INFO - Found job: Registered Nurse (RN) – LDRP at Samaritan Health Services
+2025-03-13 05:53:44,414 - job_scraper - INFO - Found job: Junior Software Engineer at Cairnify
+2025-03-13 05:53:44,414 - job_scraper - INFO - Found job: ISO Consultant at Tevora
+2025-03-13 05:53:44,414 - job_scraper - INFO - Found job: Campaign & Creative Manager, Campaign & Creative Management, Amazon, Mid Market, Amazon Ads at Amazon
+2025-03-13 05:53:44,414 - job_scraper - INFO - Found job: Doradca ds. emerytalnych (OKKu_Warszawa III)Z at ZUS
+2025-03-13 05:53:44,414 - job_scraper - INFO - Found job: Market Manager, Hotels at Airbnb
+2025-03-13 05:53:44,414 - job_scraper - INFO - Found job: Quality Control Manager at Evolve Bank & Trust
+2025-03-13 05:53:44,414 - job_scraper - INFO - Found job: Course Production Coordinator at Colibri Group
+2025-03-13 05:53:44,414 - job_scraper - INFO - Found job: Entry Level Install Technician at MSR-FSR, LLC
+2025-03-13 05:53:44,415 - job_scraper - INFO - Found job: Data Science Intern/ AI/ML Engineer Intern - Summer 2025 at Juniper Networks
+2025-03-13 05:53:44,415 - job_scraper - INFO - Found job: Internship, Data Analyst, Americas Sales & Sales Operations (Summer 2025) at Tesla
+2025-03-13 05:53:44,415 - job_scraper - INFO - Found job: One to One Teaching Aide (1:1) at TLC - The Treatment and Learning Centers
+2025-03-13 05:53:44,415 - job_scraper - INFO - Scraping linkedin - Page 1 - Total jobs found: 60
+2025-03-13 05:53:47,040 - job_scraper - INFO - Found job: Brand Designer (Remote Canada) at Mogo
+2025-03-13 05:53:47,040 - job_scraper - INFO - Found job: Creative Director, Marketing & Brand at Opry Entertainment Group
+2025-03-13 05:53:47,040 - job_scraper - INFO - Found job: Project Coordinator at Tevora
+2025-03-13 05:53:47,040 - job_scraper - INFO - Found job: Customer Success Manager - Pennsylvania at Alma
+2025-03-13 05:53:47,040 - job_scraper - INFO - Found job: Digital Designer at Skullcandy Inc.
+2025-03-13 05:53:47,041 - job_scraper - INFO - Found job: Director, Brand Creative Art Direction - Global Basketball at Nike
+2025-03-13 05:53:47,041 - job_scraper - INFO - Found job: Administrative Coordinator at InTandem Human Resources, LLC
+2025-03-13 05:53:47,041 - job_scraper - INFO - Found job: Video Editor at The Divine PR
+2025-03-13 05:53:47,041 - job_scraper - INFO - Found job: Senior Executive Assistant at GEMMA Biotherapeutics
+2025-03-13 05:53:47,041 - job_scraper - INFO - Found job: Remote Administrative Assistant at Commutatus
+2025-03-13 05:53:47,041 - job_scraper - INFO - Found job: Equipment Operator (Commercial) at City of Killeen, Texas
+2025-03-13 05:53:47,041 - job_scraper - INFO - Found job: Director, Group Operations at PIH Health
+2025-03-13 05:53:47,041 - job_scraper - INFO - Found job: Construction Cost Analyst at San Diego County Regional Airport Authority
+2025-03-13 05:53:47,042 - job_scraper - INFO - Found job: Undergraduate Logistics Summer Intern at NASA Jet Propulsion Laboratory
+2025-03-13 05:53:47,042 - job_scraper - INFO - Found job: Director, Public Safety at San Diego Convention Center Corporation
+2025-03-13 05:53:47,042 - job_scraper - INFO - Found job: Med Lab Scientist at MetaSense Inc
+2025-03-13 05:53:47,042 - job_scraper - INFO - Found job: Private Brands Coordinator at Macy's
+2025-03-13 05:53:47,042 - job_scraper - INFO - Found job: Events and Ministry Coordinator at Apartment Life
+2025-03-13 05:53:47,042 - job_scraper - INFO - Found job: Events and Ministry Coordinator at Apartment Life
+2025-03-13 05:53:47,042 - job_scraper - INFO - Found job: Content Coordinator at Blend
+2025-03-13 05:53:47,042 - job_scraper - INFO - Found job: Assistant Warehouse Manager at Salcomp Manufacturing USA
+2025-03-13 05:53:47,043 - job_scraper - INFO - Found job: Channel Account Manager at Picus Security
+2025-03-13 05:53:47,043 - job_scraper - INFO - Found job: Project Planner at Bloomingdale's
+2025-03-13 05:53:47,043 - job_scraper - INFO - Found job: Don't see what you're looking for? at Duetto
+2025-03-13 05:53:47,043 - job_scraper - INFO - Found job: Scrum Master I (US) at TD Securities
+2025-03-13 05:53:47,043 - job_scraper - INFO - Found job: Product Manager- Shockwave (Remote) at Johnson & Johnson
+2025-03-13 05:53:47,043 - job_scraper - INFO - Found job: Warehouse Supervisor 1st Shift at Boxzooka
+2025-03-13 05:53:47,043 - job_scraper - INFO - Found job: Creative Intern (Design and Advertising) at BIGO
+2025-03-13 05:53:47,043 - job_scraper - INFO - Found job: Business Analyst at Business Strategic Analyst
+2025-03-13 05:53:47,043 - job_scraper - INFO - Found job: Social Media Manager and Content Coordinator at Paisans Pizzeria And Bar
+2025-03-13 05:53:47,044 - job_scraper - INFO - Found job: Customer Service Manager, MRO at Delta Air Lines
+2025-03-13 05:53:47,044 - job_scraper - INFO - Found job: Executive Assistant at Lenmar Consulting Inc
+2025-03-13 05:53:47,044 - job_scraper - INFO - Found job: Scribe - Part Time at Unio Health Partners
+2025-03-13 05:53:47,044 - job_scraper - INFO - Found job: Linux Desktop Administrator II (Linux System Analysis) at Safran
+2025-03-13 05:53:47,044 - job_scraper - INFO - Found job: Computational Biology Data Analyst at Dale WorkForce Solutions
+2025-03-13 05:53:47,044 - job_scraper - INFO - Found job: RN - Electrophysiology at Providence
+2025-03-13 05:53:47,044 - job_scraper - INFO - Found job: Executive Assistant at Snowflake
+2025-03-13 05:53:47,044 - job_scraper - INFO - Found job: ADMINISTRATIVE ASSISTANT (PART TIME) at Crothall Healthcare
+2025-03-13 05:53:47,045 - job_scraper - INFO - Found job: Director, Talent Partner - Banana Republic at Gap Inc.
+2025-03-13 05:53:47,045 - job_scraper - INFO - Found job: Data Entry Clerk at Emerald Logistix
+2025-03-13 05:53:47,045 - job_scraper - INFO - Found job: Project Manager at Carter Lumber
+2025-03-13 05:53:47,045 - job_scraper - INFO - Found job: Executive Assistant at Snowflake
+2025-03-13 05:53:47,045 - job_scraper - INFO - Found job: Entry Level Personal Assistant at Emerald Logistix
+2025-03-13 05:53:47,045 - job_scraper - INFO - Found job: Information Security Analyst – Strategic Services at Tevora
+2025-03-13 05:53:47,045 - job_scraper - INFO - Found job: Paid Media Manager at True North
+2025-03-13 05:53:47,045 - job_scraper - INFO - Found job: Managing Director Managing Partner China APAC at Consulting Centrale
+2025-03-13 05:53:47,046 - job_scraper - INFO - Found job: Senior Manager - Learning and Development at FNP
+2025-03-13 05:53:47,046 - job_scraper - INFO - Found job: Registered Nurse (RN) – LDRP at Samaritan Health Services
+2025-03-13 05:53:47,046 - job_scraper - INFO - Found job: Junior Software Engineer at Cairnify
+2025-03-13 05:53:47,046 - job_scraper - INFO - Found job: ISO Consultant at Tevora
+2025-03-13 05:53:47,046 - job_scraper - INFO - Found job: Campaign & Creative Manager, Campaign & Creative Management, Amazon, Mid Market, Amazon Ads at Amazon
+2025-03-13 05:53:47,046 - job_scraper - INFO - Found job: Doradca ds. emerytalnych (OKKu_Warszawa III)Z at ZUS
+2025-03-13 05:53:47,046 - job_scraper - INFO - Found job: Market Manager, Hotels at Airbnb
+2025-03-13 05:53:47,046 - job_scraper - INFO - Found job: Course Production Coordinator at Colibri Group
+2025-03-13 05:53:47,046 - job_scraper - INFO - Found job: Entry Level Install Technician at MSR-FSR, LLC
+2025-03-13 05:53:47,047 - job_scraper - INFO - Found job: Data Science Intern/ AI/ML Engineer Intern - Summer 2025 at Juniper Networks
+2025-03-13 05:53:47,047 - job_scraper - INFO - Found job: Internship, Data Analyst, Americas Sales & Sales Operations (Summer 2025) at Tesla
+2025-03-13 05:53:47,047 - job_scraper - INFO - Found job: One to One Teaching Aide (1:1) at TLC - The Treatment and Learning Centers
+2025-03-13 05:53:47,047 - job_scraper - INFO - Found job: Padres Softball Camp Coach at Padres Baseball & Softball Camps
+2025-03-13 05:53:47,047 - job_scraper - INFO - Found job: Door/Security at Barcadia Bar & Grill
+2025-03-13 05:53:47,047 - job_scraper - INFO - Scraping linkedin - Page 2 - Total jobs found: 120
+2025-03-13 05:53:51,328 - job_scraper - INFO - Found job: Remote Administrative Assistant at Commutatus
+2025-03-13 05:53:51,329 - job_scraper - INFO - Found job: Brand Designer (Remote Canada) at Mogo
+2025-03-13 05:53:51,329 - job_scraper - INFO - Found job: Content Coordinator at Blend
+2025-03-13 05:53:51,329 - job_scraper - INFO - Found job: Marketing Coordinator at Yoga Alliance
+2025-03-13 05:53:51,329 - job_scraper - INFO - Found job: Creative Director, Marketing & Brand at Opry Entertainment Group
+2025-03-13 05:53:51,329 - job_scraper - INFO - Found job: Product Manager at Yoga Alliance
+2025-03-13 05:53:51,330 - job_scraper - INFO - Found job: Project Coordinator at Tevora
+2025-03-13 05:53:51,330 - job_scraper - INFO - Found job: Customer Success Manager - Pennsylvania at Alma
+2025-03-13 05:53:51,330 - job_scraper - INFO - Found job: Digital Designer at Skullcandy Inc.
+2025-03-13 05:53:51,330 - job_scraper - INFO - Found job: Administrative Coordinator at InTandem Human Resources, LLC
+2025-03-13 05:53:51,330 - job_scraper - INFO - Found job: Video Editor at The Divine PR
+2025-03-13 05:53:51,330 - job_scraper - INFO - Found job: Senior Executive Assistant at GEMMA Biotherapeutics
+2025-03-13 05:53:51,330 - job_scraper - INFO - Found job: Customer Success Manager - Illinois at Alma
+2025-03-13 05:53:51,330 - job_scraper - INFO - Found job: Equipment Operator (Commercial) at City of Killeen, Texas
+2025-03-13 05:53:51,331 - job_scraper - INFO - Found job: Director, Group Operations at PIH Health
+2025-03-13 05:53:51,331 - job_scraper - INFO - Found job: Construction Cost Analyst at San Diego County Regional Airport Authority
+2025-03-13 05:53:51,331 - job_scraper - INFO - Found job: Undergraduate Logistics Summer Intern at NASA Jet Propulsion Laboratory
+2025-03-13 05:53:51,331 - job_scraper - INFO - Found job: Director, Public Safety at San Diego Convention Center Corporation
+2025-03-13 05:53:51,331 - job_scraper - INFO - Found job: Med Lab Scientist at MetaSense Inc
+2025-03-13 05:53:51,331 - job_scraper - INFO - Found job: Private Brands Coordinator at Macy's
+2025-03-13 05:53:51,331 - job_scraper - INFO - Found job: Events and Ministry Coordinator at Apartment Life
+2025-03-13 05:53:51,331 - job_scraper - INFO - Found job: Events and Ministry Coordinator at Apartment Life
+2025-03-13 05:53:51,331 - job_scraper - INFO - Found job: Assistant Warehouse Manager at Salcomp Manufacturing USA
+2025-03-13 05:53:51,332 - job_scraper - INFO - Found job: Channel Account Manager at Picus Security
+2025-03-13 05:53:51,332 - job_scraper - INFO - Found job: Project Planner at Bloomingdale's
+2025-03-13 05:53:51,332 - job_scraper - INFO - Found job: Don't see what you're looking for? at Duetto
+2025-03-13 05:53:51,332 - job_scraper - INFO - Found job: Scrum Master I (US) at TD Securities
+2025-03-13 05:53:51,332 - job_scraper - INFO - Found job: Product Manager- Shockwave (Remote) at Johnson & Johnson
+2025-03-13 05:53:51,332 - job_scraper - INFO - Found job: Warehouse Supervisor 1st Shift at Boxzooka
+2025-03-13 05:53:51,332 - job_scraper - INFO - Found job: Creative Intern (Design and Advertising) at BIGO
+2025-03-13 05:53:51,332 - job_scraper - INFO - Found job: Business Analyst at Business Strategic Analyst
+2025-03-13 05:53:51,333 - job_scraper - INFO - Found job: Social Media Manager and Content Coordinator at Paisans Pizzeria And Bar
+2025-03-13 05:53:51,333 - job_scraper - INFO - Found job: Customer Service Manager, MRO at Delta Air Lines
+2025-03-13 05:53:51,333 - job_scraper - INFO - Found job: Executive Assistant at Lenmar Consulting Inc
+2025-03-13 05:53:51,333 - job_scraper - INFO - Found job: Scribe - Part Time at Unio Health Partners
+2025-03-13 05:53:51,333 - job_scraper - INFO - Found job: Linux Desktop Administrator II (Linux System Analysis) at Safran
+2025-03-13 05:53:51,333 - job_scraper - INFO - Found job: Computational Biology Data Analyst at Dale WorkForce Solutions
+2025-03-13 05:53:51,333 - job_scraper - INFO - Found job: RN - Electrophysiology at Providence
+2025-03-13 05:53:51,333 - job_scraper - INFO - Found job: Executive Assistant at Snowflake
+2025-03-13 05:53:51,333 - job_scraper - INFO - Found job: ADMINISTRATIVE ASSISTANT (PART TIME) at Crothall Healthcare
+2025-03-13 05:53:51,334 - job_scraper - INFO - Found job: Director, Talent Partner - Banana Republic at Gap Inc.
+2025-03-13 05:53:51,334 - job_scraper - INFO - Found job: Data Entry Clerk at Emerald Logistix
+2025-03-13 05:53:51,334 - job_scraper - INFO - Found job: Project Manager at Carter Lumber
+2025-03-13 05:53:51,334 - job_scraper - INFO - Found job: Executive Assistant at Snowflake
+2025-03-13 05:53:51,334 - job_scraper - INFO - Found job: Entry Level Personal Assistant at Emerald Logistix
+2025-03-13 05:53:51,334 - job_scraper - INFO - Found job: Information Security Analyst – Strategic Services at Tevora
+2025-03-13 05:53:51,334 - job_scraper - INFO - Found job: Paid Media Manager at True North
+2025-03-13 05:53:51,334 - job_scraper - INFO - Found job: Managing Director Managing Partner China APAC at Consulting Centrale
+2025-03-13 05:53:51,334 - job_scraper - INFO - Found job: Senior Manager - Learning and Development at FNP
+2025-03-13 05:53:51,335 - job_scraper - INFO - Found job: Talent Acquisition Specialist at The Learning Lamp
+2025-03-13 05:53:51,335 - job_scraper - INFO - Found job: Registered Nurse (RN) – LDRP at Samaritan Health Services
+2025-03-13 05:53:51,335 - job_scraper - INFO - Found job: Junior Software Engineer at Cairnify
+2025-03-13 05:53:51,335 - job_scraper - INFO - Found job: ISO Consultant at Tevora
+2025-03-13 05:53:51,335 - job_scraper - INFO - Found job: Campaign & Creative Manager, Campaign & Creative Management, Amazon, Mid Market, Amazon Ads at Amazon
+2025-03-13 05:53:51,335 - job_scraper - INFO - Found job: Doradca ds. emerytalnych (OKKu_Warszawa III)Z at ZUS
+2025-03-13 05:53:51,335 - job_scraper - INFO - Found job: Market Manager, Hotels at Airbnb
+2025-03-13 05:53:51,335 - job_scraper - INFO - Found job: Quality Control Manager at Evolve Bank & Trust
+2025-03-13 05:53:51,336 - job_scraper - INFO - Found job: Course Production Coordinator at Colibri Group
+2025-03-13 05:53:51,336 - job_scraper - INFO - Found job: Data Science Intern/ AI/ML Engineer Intern - Summer 2025 at Juniper Networks
+2025-03-13 05:53:51,336 - job_scraper - INFO - Found job: Entry Level Install Technician at MSR-FSR, LLC
+2025-03-13 05:53:51,336 - job_scraper - INFO - Scraping linkedin - Page 3 - Total jobs found: 180
+2025-03-13 05:53:57,351 - job_scraper - INFO - Found job: Brand Designer (Remote Canada) at Mogo
+2025-03-13 05:53:57,351 - job_scraper - INFO - Found job: Content Coordinator at Blend
+2025-03-13 05:53:57,351 - job_scraper - INFO - Found job: Creative Director, Marketing & Brand at Opry Entertainment Group
+2025-03-13 05:53:57,351 - job_scraper - INFO - Found job: Product Manager at Yoga Alliance
+2025-03-13 05:53:57,352 - job_scraper - INFO - Found job: Project Coordinator at Tevora
+2025-03-13 05:53:57,352 - job_scraper - INFO - Found job: Customer Success Manager - Pennsylvania at Alma
+2025-03-13 05:53:57,352 - job_scraper - INFO - Found job: Digital Designer at Skullcandy Inc.
+2025-03-13 05:53:57,352 - job_scraper - INFO - Found job: Director, Brand Creative Art Direction - Global Basketball at Nike
+2025-03-13 05:53:57,353 - job_scraper - INFO - Found job: Administrative Coordinator at InTandem Human Resources, LLC
+2025-03-13 05:53:57,353 - job_scraper - INFO - Found job: Video Editor at The Divine PR
+2025-03-13 05:53:57,353 - job_scraper - INFO - Found job: Senior Executive Assistant at GEMMA Biotherapeutics
+2025-03-13 05:53:57,353 - job_scraper - INFO - Found job: Remote Administrative Assistant at Commutatus
+2025-03-13 05:53:57,353 - job_scraper - INFO - Found job: Equipment Operator (Commercial) at City of Killeen, Texas
+2025-03-13 05:53:57,353 - job_scraper - INFO - Found job: Director, Group Operations at PIH Health
+2025-03-13 05:53:57,353 - job_scraper - INFO - Found job: Construction Cost Analyst at San Diego County Regional Airport Authority
+2025-03-13 05:53:57,353 - job_scraper - INFO - Found job: Undergraduate Logistics Summer Intern at NASA Jet Propulsion Laboratory
+2025-03-13 05:53:57,354 - job_scraper - INFO - Found job: Director, Public Safety at San Diego Convention Center Corporation
+2025-03-13 05:53:57,354 - job_scraper - INFO - Found job: Med Lab Scientist at MetaSense Inc
+2025-03-13 05:53:57,354 - job_scraper - INFO - Found job: Private Brands Coordinator at Macy's
+2025-03-13 05:53:57,354 - job_scraper - INFO - Found job: Events and Ministry Coordinator at Apartment Life
+2025-03-13 05:53:57,354 - job_scraper - INFO - Found job: Events and Ministry Coordinator at Apartment Life
+2025-03-13 05:53:57,354 - job_scraper - INFO - Found job: Assistant Warehouse Manager at Salcomp Manufacturing USA
+2025-03-13 05:53:57,354 - job_scraper - INFO - Found job: Channel Account Manager at Picus Security
+2025-03-13 05:53:57,354 - job_scraper - INFO - Found job: Project Planner at Bloomingdale's
+2025-03-13 05:53:57,355 - job_scraper - INFO - Found job: Don't see what you're looking for? at Duetto
+2025-03-13 05:53:57,355 - job_scraper - INFO - Found job: Scrum Master I (US) at TD Securities
+2025-03-13 05:53:57,355 - job_scraper - INFO - Found job: Product Manager- Shockwave (Remote) at Johnson & Johnson
+2025-03-13 05:53:57,355 - job_scraper - INFO - Found job: Warehouse Supervisor 1st Shift at Boxzooka
+2025-03-13 05:53:57,355 - job_scraper - INFO - Found job: Creative Intern (Design and Advertising) at BIGO
+2025-03-13 05:53:57,355 - job_scraper - INFO - Found job: Business Analyst at Business Strategic Analyst
+2025-03-13 05:53:57,355 - job_scraper - INFO - Found job: Social Media Manager and Content Coordinator at Paisans Pizzeria And Bar
+2025-03-13 05:53:57,355 - job_scraper - INFO - Found job: Customer Service Manager, MRO at Delta Air Lines
+2025-03-13 05:53:57,355 - job_scraper - INFO - Found job: Executive Assistant at Lenmar Consulting Inc
+2025-03-13 05:53:57,356 - job_scraper - INFO - Found job: Scribe - Part Time at Unio Health Partners
+2025-03-13 05:53:57,356 - job_scraper - INFO - Found job: Linux Desktop Administrator II (Linux System Analysis) at Safran
+2025-03-13 05:53:57,356 - job_scraper - INFO - Found job: Computational Biology Data Analyst at Dale WorkForce Solutions
+2025-03-13 05:53:57,356 - job_scraper - INFO - Found job: Executive Assistant at Snowflake
+2025-03-13 05:53:57,356 - job_scraper - INFO - Found job: ADMINISTRATIVE ASSISTANT (PART TIME) at Crothall Healthcare
+2025-03-13 05:53:57,356 - job_scraper - INFO - Found job: Director, Talent Partner - Banana Republic at Gap Inc.
+2025-03-13 05:53:57,356 - job_scraper - INFO - Found job: Automotive Technicians, All Levels at H & H CHEVROLET CADILLAC, INC
+2025-03-13 05:53:57,356 - job_scraper - INFO - Found job: Data Entry Clerk at Emerald Logistix
+2025-03-13 05:53:57,357 - job_scraper - INFO - Found job: Project Manager at Carter Lumber
+2025-03-13 05:53:57,357 - job_scraper - INFO - Found job: Executive Assistant at Snowflake
+2025-03-13 05:53:57,357 - job_scraper - INFO - Found job: Entry Level Personal Assistant at Emerald Logistix
+2025-03-13 05:53:57,357 - job_scraper - INFO - Found job: Information Security Analyst – Strategic Services at Tevora
+2025-03-13 05:53:57,357 - job_scraper - INFO - Found job: Paid Media Manager at True North
+2025-03-13 05:53:57,357 - job_scraper - INFO - Found job: Managing Director Managing Partner China APAC at Consulting Centrale
+2025-03-13 05:53:57,357 - job_scraper - INFO - Found job: Senior Manager - Learning and Development at FNP
+2025-03-13 05:53:57,357 - job_scraper - INFO - Found job: Registered Nurse (RN) – LDRP at Samaritan Health Services
+2025-03-13 05:53:57,358 - job_scraper - INFO - Found job: Junior Software Engineer at Cairnify
+2025-03-13 05:53:57,358 - job_scraper - INFO - Found job: ISO Consultant at Tevora
+2025-03-13 05:53:57,358 - job_scraper - INFO - Found job: Campaign & Creative Manager, Campaign & Creative Management, Amazon, Mid Market, Amazon Ads at Amazon
+2025-03-13 05:53:57,358 - job_scraper - INFO - Found job: Doradca ds. emerytalnych (OKKu_Warszawa III)Z at ZUS
+2025-03-13 05:53:57,358 - job_scraper - INFO - Found job: Market Manager, Hotels at Airbnb
+2025-03-13 05:53:57,358 - job_scraper - INFO - Found job: Quality Control Manager at Evolve Bank & Trust
+2025-03-13 05:53:57,358 - job_scraper - INFO - Found job: Course Production Coordinator at Colibri Group
+2025-03-13 05:53:57,358 - job_scraper - INFO - Found job: Data Science Intern/ AI/ML Engineer Intern - Summer 2025 at Juniper Networks
+2025-03-13 05:53:57,358 - job_scraper - INFO - Found job: Entry Level Install Technician at MSR-FSR, LLC
+2025-03-13 05:53:57,359 - job_scraper - INFO - Found job: Internship, Data Analyst, Americas Sales & Sales Operations (Summer 2025) at Tesla
+2025-03-13 05:53:57,359 - job_scraper - INFO - Found job: One to One Teaching Aide (1:1) at TLC - The Treatment and Learning Centers
+2025-03-13 05:53:57,359 - job_scraper - INFO - Scraping linkedin - Page 4 - Total jobs found: 240
