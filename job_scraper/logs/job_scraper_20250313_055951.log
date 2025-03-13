@@ -1,0 +1,5 @@
+2025-03-13 06:00:28,657 - job_scraper - INFO - Found job: Senior Program Manager at Tech Innovations Inc.
+2025-03-13 06:00:28,657 - job_scraper - INFO - Found job: Business Development Manager at Global Solutions Corp
+2025-03-13 06:00:28,657 - job_scraper - INFO - Found job: Digital Transformation Lead at Innovation Labs
+2025-03-13 06:00:28,657 - job_scraper - INFO - Scraping mock - Page 1 - Total jobs found: 3
+2025-03-13 06:00:28,658 - job_scraper - INFO - Results saved to data/jobs.json
