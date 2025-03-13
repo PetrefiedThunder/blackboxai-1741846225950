@@ -149,7 +149,7 @@ Technical Product Manager</textarea>
     
     // Function to display jobs in the UI
     function displayJobs(jobs) {
-      console.log('Displaying jobs:', JSON.stringify(jobs, null, 2)); // Pretty print the jobs
+      console.log('Displaying jobs:', JSON.stringify(jobs, null, 2));
       
       const jobResults = document.getElementById('jobResults');
       if (!jobResults) {
@@ -182,7 +182,7 @@ Technical Product Manager</textarea>
       jobs.forEach(job => {
         try {
           const jobCard = document.createElement('div');
-          jobCard.className = 'bg-white p-6 rounded-lg shadow-md mb-4';
+          jobCard.className = 'bg-white p-6 rounded-lg shadow-md mb-4 hover:shadow-lg transition-shadow duration-200';
           
           // Calculate match score display
           const score = job.score || 0;
@@ -198,7 +198,6 @@ Technical Product Manager</textarea>
             <span>${job.salary}</span>
           ` : '';
           
-          // Create job card HTML
           jobCard.innerHTML = `
             <div class="flex justify-between items-start">
               <div class="flex-grow">
@@ -237,7 +236,7 @@ Technical Product Manager</textarea>
               </div>
               <a href="${job.url || '#'}" 
                  target="_blank" 
-                 class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-600 bg-indigo-100 hover:bg-indigo-200 ${!job.url ? 'opacity-50 cursor-not-allowed' : ''}">
+                 class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-600 bg-indigo-100 hover:bg-indigo-200 transition-colors duration-200 ${!job.url ? 'opacity-50 cursor-not-allowed' : ''}">
                 View Job
                 <i class="fas fa-external-link-alt ml-2"></i>
               </a>
@@ -248,74 +247,6 @@ Technical Product Manager</textarea>
         } catch (error) {
           console.error('Error creating job card:', error, job);
         }
-      });
-        
-        // Calculate match score display
-        const score = job.score || 0;
-        const scoreClass = score >= 0.7 ? 'bg-green-100 text-green-800' : 
-                         score >= 0.4 ? 'bg-yellow-100 text-yellow-800' : 
-                         'bg-red-100 text-red-800';
-        const scorePercentage = Math.round(score * 100);
-        
-        // Format salary if available
-        const salaryDisplay = job.salary ? `
-          <span class="mx-2">•</span>
-          <i class="fas fa-money-bill-wave"></i>
-          <span>${job.salary}</span>
-        ` : '';
-        
-        // Create job card HTML
-        jobCard.innerHTML = `
-          <div class="flex justify-between items-start">
-            <div class="flex-grow">
-              <h3 class="text-lg font-semibold text-gray-900">${job.title || 'Untitled Position'}</h3>
-              <div class="flex items-center mt-1 space-x-2 text-sm text-gray-600">
-                <i class="fas fa-building"></i>
-                <span>${job.company || 'Company Not Specified'}</span>
-              </div>
-            </div>
-            <div class="text-right ml-4">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${scoreClass}">
-                ${scorePercentage}% Match
-              </span>
-            </div>
-          </div>
-          
-          <div class="mt-4 space-y-3">
-            <div class="flex items-center space-x-2 text-sm text-gray-600">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>${job.location || 'Location Not Specified'}</span>
-              ${salaryDisplay}
-            </div>
-            
-            <p class="text-sm text-gray-600 mt-2">${job.description || 'No description available.'}</p>
-            
-            ${job.required_skills ? `
-              <div class="flex flex-wrap gap-2 mt-3">
-                ${job.required_skills.map(skill => `
-                  <span class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded">
-                    ${skill}
-                  </span>
-                `).join('')}
-              </div>
-            ` : ''}
-          </div>
-          
-          <div class="mt-4 flex justify-between items-center">
-            <div class="text-sm text-gray-500">
-              <i class="fas fa-clock"></i>
-              <span>Posted: ${new Date(job.date_posted || job.date_found).toLocaleDateString()}</span>
-            </div>
-            <a href="${job.url || '#'}" 
-               target="_blank" 
-               class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-600 bg-indigo-100 hover:bg-indigo-200 ${!job.url ? 'opacity-50 cursor-not-allowed' : ''}">
-              View Job
-              <i class="fas fa-external-link-alt ml-2"></i>
-            </a>
-          </div>
-        `;
-        
-        jobResults.appendChild(jobCard);
       });
     }
 
@@ -334,7 +265,7 @@ Technical Product Manager</textarea>
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log('API Response:', JSON.stringify(data, null, 2)); // Pretty print the response
+        console.log('API Response:', JSON.stringify(data, null, 2));
         
         // Update last updated time
         const lastUpdated = new Date(data.timestamp).toLocaleString();
@@ -345,39 +276,18 @@ Technical Product Manager</textarea>
         
         // Display jobs
         if (data && data.jobs && Array.isArray(data.jobs)) {
-          if (data.jobs.length === 0) {
-            jobResults.innerHTML = `
-              <div class="text-gray-600 p-4 text-center">
-                No jobs found. Try adjusting your search criteria.
-              </div>
-            `;
-          } else {
-            displayJobs(data.jobs);
-          }
+          displayJobs(data.jobs);
         } else {
           throw new Error('Invalid response format');
         }
       } catch (error) {
         console.error('Error fetching jobs:', error);
-        document.getElementById('jobResults').innerHTML = `
+        jobResults.innerHTML = `
           <div class="text-red-600 p-4 text-center">
             Error loading jobs. Please try again.
           </div>
         `;
       }
-    }
-
-    // Function to handle form submission
-    async function handleSearch(e) {
-      e.preventDefault();
-      const searchButton = document.querySelector('button[type="submit"]');
-      searchButton.disabled = true;
-      searchButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Searching...';
-      
-      await fetchJobs('search');
-      
-      searchButton.disabled = false;
-      searchButton.innerHTML = '<i class="fas fa-search mr-2"></i>Search Jobs';
     }
 
     // Add event listeners for form submission and refresh button
@@ -391,11 +301,6 @@ Technical Product Manager</textarea>
         await fetchJobs('search');
       } catch (error) {
         console.error('Search error:', error);
-        document.getElementById('jobResults').innerHTML = `
-          <div class="text-red-600 p-4 text-center">
-            Error: ${error.message}
-          </div>
-        `;
       } finally {
         searchButton.disabled = false;
         searchButton.innerHTML = '<i class="fas fa-search mr-2"></i>Search Jobs';
@@ -411,11 +316,6 @@ Technical Product Manager</textarea>
         await fetchJobs('refresh');
       } catch (error) {
         console.error('Refresh error:', error);
-        document.getElementById('jobResults').innerHTML = `
-          <div class="text-red-600 p-4 text-center">
-            Error: ${error.message}
-          </div>
-        `;
       } finally {
         refreshButton.disabled = false;
         refreshButton.innerHTML = '<i class="fas fa-sync-alt mr-2"></i>Refresh Jobs';
@@ -455,11 +355,6 @@ Technical Product Manager</textarea>
         await fetchJobs('search');
       } catch (error) {
         console.error('Initial load error:', error);
-        document.getElementById('jobResults').innerHTML = `
-          <div class="text-red-600 p-4 text-center">
-            Error loading jobs: ${error.message}
-          </div>
-        `;
       }
     });
   </script>
